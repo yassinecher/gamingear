@@ -28,6 +28,6 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: https://129.151.237.69:21
+          server: 129.151.237.69
           username: ftp_gaminggear
           password: emCHW7MZMmz5iSCD
