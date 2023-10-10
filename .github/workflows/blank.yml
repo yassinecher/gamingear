@@ -30,4 +30,4 @@ jobs:
         with:
           server: https://129.151.237.69:21
           username: ftp_gaminggear
-          password: ${{ emCHW7MZMmz5iSCD }}
+          password: emCHW7MZMmz5iSCD
