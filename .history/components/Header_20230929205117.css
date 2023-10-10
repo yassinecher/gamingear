@@ -1,0 +1,51 @@
+.animation-container {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 800px; /* Adds perspective for the 3D effect */
+  }
+  
+  .center-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ff5733; /* Change to your desired dot color */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .dot {
+    width: 4px;
+    height: 4px;
+    background-color: #ff5733; /* Change to your desired dot color */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    animation: radialMove 2s ease-in-out infinite;
+  }
+  
+  @keyframes radialMove {
+    0% {
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(calc(50% - 1px)) translateY(calc(-50% - 1px)); /* Move to periphery */
+      opacity: 0;
+    }
+  }
+  

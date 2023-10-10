@@ -1,0 +1,50 @@
+/* Header.css */
+.animated-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    animation: bounce 2s ease-in-out infinite;
+  }
+  
+  .dot:nth-child(1) {
+    animation-delay: 0.2s;
+    left: 50px;
+    top: 0;
+  }
+  
+  .dot:nth-child(2) {
+    animation-delay: 0.4s;
+    left: -50px;
+    top: 0;
+  }
+  
+  .dot:nth-child(3) {
+    animation-delay: 0.6s;
+    left: 0;
+    top: 50px;
+  }
+  
+  .dot:nth-child(4) {
+    animation-delay: 0.8s;
+    left: 0;
+    top: -50px;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  

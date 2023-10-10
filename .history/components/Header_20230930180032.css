@@ -1,0 +1,45 @@
+
+.block1 {
+	position: relative;
+margin: 15px;
+
+	background: linear-gradient(0deg, #000, #272727);
+  border-radius:50%;
+  padding: 15px;
+
+}
+
+.block1:before, .block1:after {
+	content: '';
+	position: absolute;
+
+	left: -4px;
+	top: -4px;
+   border-radius:50%;
+	background: linear-gradient(45deg, #D4AF37 , #ebcc67 , #B69119 ,#fde9a0 ,#D4AF37 , #dbd4bd , #B69119 ,#ddd8c6 ,#D4AF37 , #dac379 , #B69119 ,#c0b180 );
+	background-size: 400%;
+	width: calc(100% + 8px);
+	height: calc(100% + 8px);
+	z-index: -1;
+	animation: steam 40s linear infinite;
+}
+
+@keyframes steam {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.block1:after {
+	filter: blur(10px);
+  
+}
+.bg-gold{
+background-color: #fff9e6 ;
+}

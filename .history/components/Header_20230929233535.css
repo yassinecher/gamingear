@@ -1,0 +1,26 @@
+@keyframes move-particles {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(20px, -20px); /* Adjust the movement distance */
+    }
+  }
+  
+  /* Apply the animation to the pseudo-element */
+  .logo-container::before {
+    content: ''; /* Create a pseudo-element */
+    position: absolute;
+    top: 50%; /* Adjust the starting position */
+    left: 50%; /* Adjust the starting position */
+    width: 6px; /* Adjust particle size */
+    height: 6px; /* Adjust particle size */
+    background-color: #fff; /* Particle color */
+    border-radius: 50%; /* Make it a circle */
+    animation: move-particles 2s alternate infinite ease-in-out; /* Adjust animation properties */
+    opacity: 0.7; /* Adjust opacity if needed */
+    pointer-events: none; /* Allow clicks to pass through particles */
+    z-index: 1; /* Adjust z-index as needed */
+    transform-origin: center;
+  }
+  

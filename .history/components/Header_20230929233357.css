@@ -1,0 +1,30 @@
+/* Header.css */
+
+.logo-container {
+    position: relative; /* Required for pseudo-elements */
+    overflow: hidden; /* Hide particles that overflow the container */
+  }
+  
+  .logo-container::before {
+    content: ''; /* Create a pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/path/to/particle-image.png'); /* Replace with your particle image */
+    background-size: cover; /* Adjust particle size as needed */
+    pointer-events: none; /* Allow clicks to pass through particles */
+    animation: particles-float 10s linear infinite; /* Adjust animation duration as needed */
+    z-index: 0; /* Behind the logo */
+  }
+  
+  @keyframes particles-float {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100%); /* Move particles upward */
+    }
+  }
+  

@@ -1,0 +1,12 @@
+/* Header.css */
+.dots-border {
+ 
+  }
+  
+  .dots-border {
+    padding: 15px;
+    background: radial-gradient(rgb(255, 255, 255) 2px, transparent 3px);
+    background-size: 12px 12px; /* Adjust the size of the dots as needed */
+    border-radius: 50%;
+  }
+  

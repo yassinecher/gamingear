@@ -1,0 +1,42 @@
+
+.block1 {
+	position: relative;
+
+	background: linear-gradient(0deg, #000, #272727);
+  border-radius:50%;
+  padding: 10px;
+    
+}
+
+.block1:before, .block1:after {
+	content: '';
+	position: absolute;
+
+	left: -2px;
+	top: -2px;
+   border-radius:50%;
+	background: linear-gradient(45deg, #b3b610, #ffff00, #474d2d,#ffff00, #474d2d, #d8a20d, 
+		#474d2d, #b3b610,#474d2d, #b1ce10,#474d2d);
+	background-size: 400%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	z-index: -1;
+	animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.block1:after {
+	filter: blur(50px);
+  
+}
