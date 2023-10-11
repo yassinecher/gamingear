@@ -25,7 +25,7 @@ jobs:
       - name: 📂 Sync Files
         uses: SamKirkland/web-deploy@v1
         with:
-          target-server: example.com
-          remote-user: username
+          target-server: 129.151.237.69:22
+          remote-user: opc
           private-ssh-key: ${{ secrets.SSH_KEY }}
           destination-path: /www/wwwroot/gaming
